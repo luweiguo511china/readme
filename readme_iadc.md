@@ -157,11 +157,11 @@ current application size is: ~kB
 | double rmsCal(double buffer[], double adcAve);    | rms calculation            |
 
 **variable**
-| variable                                          | Comment                    | 
-|---------------------------------------------------|----------------------------|
-| extern double buffer[ADC_BUFFER_SIZE];            | buffer to save adc data    |
-| extern double adcGainResult;                      | adc gain cal result        |
-| extern double adcOffsetresult;                    | adc offset cal result      |
+| variable                                   | Comment                    | 
+|--------------------------------------------|----------------------------|
+| double buffer[ADC_BUFFER_SIZE];            | buffer to save adc data    |
+| double adcGainResult;                      | adc gain cal result        |
+| double adcOffsetresult;                    | adc offset cal result      |
 
 ## Power Consumption ##
 | Components(Peripheral) | Power Up       | Power Down       | Comment         |

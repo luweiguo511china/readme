@@ -115,7 +115,10 @@ current application size is: ~kB
 
 
 ## API Overview ##
-
+| EFR32BG22 | REF3312       | Direction (wrt BG22) | Comment         |
+|-----------|---------------|----------------------|-----------------|
+| PA0       | IN1           | OUT1                 | ADC reference   |
+| GND       | GND           |                      |                 |
 | API                                   |  Comment                              |
 | void initLetimer(void);               |  -                                    |
 | void letimerDelay(uint32_t msec);     | simple delay                          |

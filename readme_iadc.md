@@ -109,10 +109,8 @@ The application sits in EM1 until an interrupt occurs. The push buttons on the G
 - dac70501
   - uint16_t dac70501_init(void);                   /* dac70501 initialization */
   - float dac70501_readRef(void);                   /* dac70501 voltage read */
-
   - uint16_t dac70501_setRef(uint8_t dacValueHigh, uint8_t dacValueLow); /* dac70501 output register set */
   - uint16_t dac70501_setVolt(float voltValue);     /* dac70501 voltage set */
-
   - uint16_t dac070501_powerDown(uint8_t dac_pwdwn, uint8_t ref_pwdwn); /* dac70501 power down */
   - uint16_t dac70501_reStart(void);                /* dac70501 powerup(restart) */
 
@@ -123,7 +121,7 @@ The application sits in EM1 until an interrupt occurs. The push buttons on the G
   - void ads1220_Calibrate(void);                   /* ads1220 calibration */
   - void ads1220_powerDown(void);                   /* ads1220 power down */
 
-- efr32bg22 adc ###
+- efr32bg22 adc
   - void resetIADC(void);                           /* bg22 iadc reset */
   - void rescaleIADC(uint32_t newScale);            /* bg22 iadc rescale */
   - void initIADC(void);                            /* bg22 iadc initialization */
@@ -132,7 +130,7 @@ The application sits in EM1 until an interrupt occurs. The push buttons on the G
   - double iadcPollSingleResult(void);              /* bg22 iadc voltage polling */
   - uint32_t iadcDifferentialCalibrate();           /* bg22 iadc calibration */
 
-- global buffer ####
+- global buffer
   - double rmsCal(double buffer[], double adcAve);
   - #define ADC_BUFFER_SIZE 1024
   - extern double buffer[ADC_BUFFER_SIZE];          /* buffer to save adc data */

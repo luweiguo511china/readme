@@ -1,4 +1,4 @@
-# EFR32BG22 IADC ENOB #
+# EFR32BG22 IADC 16-bit ENOB #
 
 ## Description ##
 
@@ -31,15 +31,16 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
   - TI 24-bit Low Power Delta-sigma ADC [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
   - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/product/REF3312)
+  - Silabs [EFR32BG22](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
 - Schematic for the bgm board
 
 ## Setup ##
 
-Connect bgm board with WSTK main board via Simplicity 10 pins adater, and connect WSTK main board to PC via mini USB.
-- a. Set the debug mode as 'OUT'.
-- b. set target in Simplicity launcher as EFR32BG22C112F352GM32.
-- c. read back the secure FW version.
-- d. flash the bootloader first via commander or flash programmer.
+Connect bgm board with WSTK main board via Simplicity 10 pins adapter, and connect WSTK main board to PC via mini USB.
+- Set the debug mode as **'OUT'**.
+- Set **target device** in Simplicity Studio launcher as EFR32BG22C224F352GM32.
+- Read back the **Secure FEW** version.
+- Flash the **bootloader** first via **Simplicity commander** or **flash programmer**.
 - C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
 The final connections should looks like so:
@@ -211,5 +212,5 @@ note: only EFR32/EFM32 S2 support this.
 - REF3312 [data sheet](https://www.ti.com/product/REF3312)
 - EFR32BG22 [reference manual](https://www.silabs.com/documents/public/reference-manuals/brd4185a-rm.pdf)
 - EFR32BG22 [data sheet](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
-- [AN1189](https://www.silabs.com/documents/public/application-notes/an1189-efr32-iadc.pdf): Incremental Analog to DigitalConverter (IADC)
+- [AN1189](https://www.silabs.com/documents/public/application-notes/an1189-efr32-iadc.pdf): Incremental Analog to Digital Converter (IADC)
 - ENOB [calculation](https://www.tij.co.jp/lit/ug/tiduda7/tiduda7.pdf?ts=1630225963102&ref_url=https%253A%252F%252Fwww.google.com%252F)

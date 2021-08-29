@@ -2,7 +2,7 @@
 
 ## Description ##
 
-The EFR32 Wireless Gecko Series 2 IADC is an intermediate architecture combining techniques from both **Successive Approximation Register (SAR)** and **Delta-Sigma** style converters. The maximum resolution is 12 bits, which can achieve one million samples per second (1 Msps).  
+The EFR32 Wireless Gecko **Series 2** IADC is an intermediate architecture combining techniques from both **Successive Approximation Register (SAR)** and **Delta-Sigma** style converters. The maximum resolution is 12 bits, which can achieve one million samples per second (1 Msps).  
 
 The flexible incremental architecture uses **oversampling** to allow applications to trade speed for **higher resolution**.  
 
@@ -36,20 +36,20 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 
 ## Setup ##
 
-Connect bgm board with WSTK main board via Simplicity 10 pins adapter, and connect WSTK main board to PC via mini USB.
-- Set the debug mode as **'OUT'**.
-- Set **target device** in Simplicity Studio launcher as EFR32BG22C224F352GM32.
+Connect bgm board with WSTK **mainboard** via **Simplicity 10 pins Adapter**, and connect WSTK main board to PC via **mini USB**.
+- Set the debug mode as **OUT**.
+- Set **target device** in Simplicity Studio **Launcher->Adapter** as EFR32BG22C224F352GM32.
 - Read back the **Secure FW** version.
 - Flash the **bootloader** first via **Simplicity commander** or **flash programmer**.
-- C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
+- C:\Sinstal_path\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
-The final connections should looks like so:
+The final **connections** should looks like so:
+![brd4001a+bgm](images/brd4001a.png)
 
 ## Hardware ##
 
 Schematic is [here](doc/CGM-Board_Schematic.pdf)
 ### Connection Required ###
-![brd4001a+bgm](images/brd4001a.png)
 
 ### Pins Function Map ###
 

@@ -43,7 +43,7 @@ Connect bgm board with WSTK **mainboard** via **Simplicity 10 pins Adapter**, an
 - C:\Sinstal_path\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
 The final **connections** should looks like so:
-![brd4001a+bgm](images/brd4001a.png)
+![brd4001a+bgm](images/bgm-iadc-connection.png)
 
 ## Hardware ##
 

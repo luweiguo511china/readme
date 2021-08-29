@@ -193,10 +193,10 @@ note: only EFR32/EFM32 S2 support this.
 ## Testing ##
 
 ## How to test ##
-a. run the code
-b. dump the adc data via **vcom**
-c. import the data into excel
-d. calcuate the ENOB
+- a. run the code
+- b. dump the adc data via **vcom**
+- c. import the data into excel
+- d. calcuate the ENOB
 
 ## Known **Issues** ##
 - bgm failure item

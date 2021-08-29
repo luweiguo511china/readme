@@ -9,7 +9,7 @@ The flexible incremental architecture uses **oversampling** to allow application
 This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It also cover offset and gain **calibration** of the IADC with **external reference**.  
 
 **Key points** to attain 14.3 bit ENOB:
-- differential mode
+- differential mode input
 - external reference
 - 32+ oversample rate
 
@@ -42,12 +42,13 @@ Connect bgm board with WSTK main board via Simplicity 10 pins adater, and connec
 - d. flash the bootloader first via commander or flash programmer.
 - C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
-
 The final connections should looks like so:
 
 ## Hardware ##
+
 Schematic is [here](doc/CGM-Board_Schematic.pdf)
 ### Connection Required ###
+![brd4001a+bgm](images/connection.png)
 
 ### Pins Function Map ###
 
@@ -55,7 +56,6 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 |-----------|---------------|----------------------|-----------------|
 | PA0       | IN1           | OUT1                 | ADC reference   |
 | GND       | GND           |                      |                 |
-
 
 | EFR32BG22 | ADC Input     | Direction (wrt BG22) | Comment   |
 |-----------|---------------|----------------------|-----------------|
@@ -65,7 +65,6 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 | PC0       | IN1           | OUT1                 | ADC INPUT       |
 | PC1       | IN2           | OUT2                 | ADC INPUT       |
 
-
 | EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
 |-----------|---------------|----------------------|----------------|
 | PA3       | IN1           | OUT1                 | SPI MISO       |
@@ -73,7 +72,6 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 | PC4       | IN3           | OUT3                 | SPI CLK        |
 | PC2       | IN4           | OUT4                 | SPI CS         |
 | PB0       | IN4           | OUT4                 | SPI INT        |
-
 
 VCOM, LED, Button, CLK OUT, PTI:
 | EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
@@ -83,7 +81,6 @@ VCOM, LED, Button, CLK OUT, PTI:
 | NO        | IN4           | OUT4                 | SPI INT  |
 | PC5       | IN4           | OUT4                 | SPI INT  |
 | PC3       | IN4           | OUT4                 | SPI INT  |
-
 
 
 Import the included .sls file to Simplicity Studio then build and flash the project to the bgm board.
@@ -110,7 +107,7 @@ bootloader + applicatoin nvm3 + ota slot
 current application size is: ~kB
 
 ### Software Workflow ###
-
+![brd4001a+bgm](images/connection.png)
 
 ## API Overview ##
 **General**:
@@ -162,10 +159,7 @@ current application size is: ~kB
 | extern double adcOffsetresult;                    | adc offset cal result      |
 
 
-a. run the code
-b. dump the adc data via **vcom**
-c. import the data into excel
-d. calcuate the ENOB
+
 ## Power Consumption ##
 | Components(Peripheral) | Power Up       | Power Down       | Comment         |
 |------------------------|----------------|------------------|-----------------|
@@ -196,10 +190,13 @@ Open the "Project Properties" and navigate to the "C/C++ Build -> Board/Part/SDK
 note: only EFR32/EFM32 S2 support this.
 
 
-
-
 ## Testing ##
+
 ## How to test ##
+a. run the code
+b. dump the adc data via **vcom**
+c. import the data into excel
+d. calcuate the ENOB
 
 ## Known **Issues** ##
 - bgm failure item

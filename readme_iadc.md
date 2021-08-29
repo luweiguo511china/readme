@@ -75,22 +75,15 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 | PB0       | IN4           | OUT4                 | SPI INT        |
 
 
-VCOM:
+VCOM, LED, Button, CLK OUT, PTI:
+| EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
 |-----------|---------------|----------------------|----------------|
 | PA5       | IN1           | OUT1                 | USART0 TX |
 | PA6       | IN1           | OUT1                 | USART0 RX |
-
-LED:
-|-----------|---------------|----------------------|----------------|
 | NO        | IN4           | OUT4                 | SPI INT  |
-Button:
-|-----------|---------------|----------------------|----------------|
 | PC5       | IN4           | OUT4                 | SPI INT  |
-|-----------|---------------|----------------------|----------------|
-CLK OUT:
 | PC3       | IN4           | OUT4                 | SPI INT  |
-PTI:
-|-----------|---------------|----------------------|----------------|
+
 
 
 Import the included .sls file to Simplicity Studio then build and flash the project to the bgm board.

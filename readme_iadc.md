@@ -40,7 +40,7 @@ C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\
 
 The final connections should looks like so:
 
-## hardware ##
+## Hardware ##
 Schematic is [here](doc/bgm.pdf)
 
 | EFR32BG22 | REF3312 Input | ULN2003 Output | 28BYJ-48        |
@@ -99,7 +99,7 @@ d. calcuate the ENOB
 
 gg11_stepper_motor.sls
 
-## Steps to create the project ##
+## Steps to Create the Project ##
 a. add EFR32BG22C224F512IM32 in my products and select it.
 a. For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with Bluetooth - SoC Empty project.
 b. Add software component Services->IO Stream->IO Stream: USART. also configure it.

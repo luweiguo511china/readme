@@ -36,11 +36,11 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 ## Setup ##
 
 Connect bgm board with WSTK main board via Simplicity 10 pins adater, and connect WSTK main board to PC via mini USB.
-a. Set the debug mode as 'OUT'.
-b. set target in Simplicity launcher as EFR32BG22C112F352GM32.
-c. read back the secure FW version.
-d. flash the bootloader first via commander or flash programmer.
-C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
+- a. Set the debug mode as 'OUT'.
+- b. set target in Simplicity launcher as EFR32BG22C112F352GM32.
+- c. read back the secure FW version.
+- d. flash the bootloader first via commander or flash programmer.
+- C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
 
 The final connections should looks like so:
@@ -160,16 +160,16 @@ d. calcuate the ENOB
 bluetooth_bgm_iadc.sls
 
 ## Steps to Create the Project ##
-a. add EFR32BG22C224F512IM32 in my products and select it.
-a. For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with Bluetooth - SoC Empty project.
-b. Add software component Services->IO Stream->IO Stream: USART. also configure it.
-c. Add Add **platform->peripheral->iadc**
-d. Add **platform->peripheral->i2c**
-e. add folder inc and drv.
-f. drag the files into the folder.
-g. add the inc path.
-h. replace the **app.c**
-e. **ignore** PTI warning in pintool.
+- a. add EFR32BG22C224F512IM32 in my products and select it.
+- a. For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with Bluetooth - SoC Empty project.
+- b. Add software component Services->IO Stream->IO Stream: USART. also configure it.
+- c. Add Add **platform->peripheral->iadc**
+- d. Add **platform->peripheral->i2c**
+- e. add folder inc and drv.
+- f. drag the files into the folder.
+- g. add the inc path.
+- h. replace the **app.c**
+- e. **ignore** PTI warning in pintool.
 
 ## How to Port to Another Part ##
 

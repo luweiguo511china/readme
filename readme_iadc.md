@@ -105,7 +105,7 @@ The application sits in EM1 until an interrupt occurs. The push buttons on the G
 ## API Overview ##
 - General
   - void initLetimer(void);
-  - void letimerDelay(uint32_t msec);               /* simple delay */
+  - void letimerDelay(uint32_t msec);     &nbsp; &nbsp; &nbsp;           /* simple delay */
   - void initButtonEM2(void);                       /* button in EM2 */
   - void initClockOut(void);                        /* route clock to pin */
   - void debounceButton(void);                      /* button denouncing */

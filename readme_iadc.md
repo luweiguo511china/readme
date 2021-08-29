@@ -43,40 +43,41 @@ The final connections should looks like so:
 ## Hardware ##
 Schematic is [here](doc/bgm.pdf)
 
-| EFR32BG22 | REF3312 Input | ULN2003 Output | 28BYJ-48        |
-|------|---------------|----------------|-----------------|
-| PA0  | IN1           | OUT1           | ADC reference   |
-| GND  | GND           |                |                 |
+| EFR32BG22 | REF3312       | Direction (wrt BG22) | Comment         |
+|-----------|---------------|----------------------|-----------------|
+| PA0       | IN1           | OUT1                 | ADC reference   |
+| GND       | GND           |                      |                 |
 
 
-| EFR32BG22 | ADC Input | ULN2003 Output | 28BYJ-48        |
-|------|---------------|----------------|-----------------|
-| PD0  | IN1           | OUT1           | ADC INPUT   |
-| PD1  | IN2           |                | ADC INPUT   |
-|------|---------------|----------------|-----------------|
-| PC0  | IN1           | OUT1           | ADC INPUT |
-| PC1  | IN2           | OUT2           | ADC INPUT |
+| EFR32BG22 | ADC Input     | Direction (wrt BG22) | Comment   |
+|-----------|---------------|----------------------|-----------------|
+| PD0       | IN1           | AIN                  | ADC INPUT       |
+| PD1       | IN2           | AIN                  | ADC INPUT       |
+|-----------|---------------|----------------------|-----------------|
+| PC0       | IN1           | OUT1                 | ADC INPUT       |
+| PC1       | IN2           | OUT2                 | ADC INPUT       |
 
 
-| EFR32BG22 | ADC1220 Input | ULN2003 Output | 28BYJ-48        |
-|------|---------------|----------------|-----------------|
-| PA3  | IN1           | OUT1           | SPI MISO |
-| PA4  | IN2           | OUT2           | SPI MOSI |
-| PC4  | IN3           | OUT3           | SPI CLK  |
-| PC2  | IN4           | OUT4           | SPI CS   |
-| PB0  | IN4           | OUT4           | SPI INT  |
+| EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
+|-----------|---------------|----------------------|----------------|
+| PA3       | IN1           | OUT1                 | SPI MISO       |
+| PA4       | IN2           | OUT2                 | SPI MOSI       |
+| PC4       | IN3           | OUT3                 | SPI CLK        |
+| PC2       | IN4           | OUT4                 | SPI CS         |
+| PB0       | IN4           | OUT4                 | SPI INT        |
 
 
 VCOM:
-| PA5  | IN1           | OUT1           | USART0 TX |
-| PA6  | IN1           | OUT1           | USART0 RX |
+| PA5       | IN1           | OUT1                 | USART0 TX |
+| PA6       | IN1           | OUT1                 | USART0 RX |
 
 LED:
-| NO  | IN4           | OUT4           | SPI INT  |
+| NO        | IN4           | OUT4                 | SPI INT  |
 Button:
-| PC5  | IN4           | OUT4           | SPI INT  |
+| PC5       | IN4           | OUT4                 | SPI INT  |
 CLK OUT:
-| PC3  | IN4           | OUT4           | SPI INT  |
+| PC3       | IN4           | OUT4                 | SPI INT  |
+PTI:
 
 
 Import the included .sls file to Simplicity Studio then build and flash the project to the bgm board.

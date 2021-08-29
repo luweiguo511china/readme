@@ -174,16 +174,16 @@ current application size is: ~kB
 bluetooth_bgm_iadc.sls
 
 ## Steps to Create the Project ##
-- a. add **EFR32BG22C224F352GM32** in **my Products** and select it.
-- a. For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with **Bluetooth - SoC Empty project**.
-- b. Add software component **Services->IO Stream->IO Stream: USART**. also configure it.
-- c. Add Add **platform->peripheral->iadc**
-- d. Add **platform->peripheral->i2c**
-- e. add folder inc and drv.
-- f. drag the files into the folder.
-- g. add the inc path.
-- h. replace the **app.c**
-- e. **ignore** PTI warning in pintool.
+- add **EFR32BG22C224F352GM32** in **my Products** and select it.
+- For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with **Bluetooth - SoC Empty project**.
+- Add software component **Services->IO Stream->IO Stream: USART**. also configure it.
+- Add Add **platform->peripheral->iadc**
+- Add **platform->peripheral->i2c**
+- add folder inc and drv.
+- drag the files into the folder.
+- add the inc path.
+- replace the **app.c**
+- **ignore** PTI warning in pintool.
 
 ## How to Port to Another Part ##
 
@@ -195,9 +195,9 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 ## Testing ##
 
 ## How to Test ##
-- run the code
+- Run the code
 - dump the adc data via **vcom**
-- import the data into excel
+- aa
 - calcuate the ENOB
 
 ## Known **Issues** ##
@@ -205,7 +205,7 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 - cgm failure item
 - PTI not used
 - PC05 use as button (port C/D), not support simple button.
-- OTA not support due to flash size. may need lmza to support this on BG22 with 512k flash.
+- OTA is not supported, due to flash size limitation. may need lmza to support this on BG22 with 512k flash.
 
 ## Reference ##
 - DAC70501 [data sheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)

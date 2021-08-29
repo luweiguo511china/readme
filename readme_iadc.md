@@ -2,9 +2,9 @@
 
 ## Description ##
 
-The EFR32 Wireless Gecko Series 2 IADC is an intermediate architecture combining techniques from both Successive Approximation Register (SAR) and Delta-Sigma style converters. The maximum resolution is 12 bits, which can achieve one million samples per second (1 Msps). The flexible incremental architecture uses oversampling to allow applications to trade speed for higher resolution. 
-An integrated input multiplexer can select from external I/Os and several internal signals. With PRS and DMA, the IADC can operate without CPU intervention, minimizing current consumption or allowing the core to do other work. The IADC can be clocked at different speeds, run using different warm-up modes, and shut down between conversions to reduce the energy consumption even further.
-This example discusses how to attain 14.3-bit ENOB with oversampling. It also cover offset and gain calibration of the IADC with external reference.
+The EFR32 Wireless Gecko Series 2 IADC is an intermediate architecture combining techniques from both Successive Approximation Register (SAR) and Delta-Sigma style converters. The maximum resolution is 12 bits, which can achieve one million samples per second (1 Msps). The flexible incremental architecture uses oversampling to allow applications to trade speed for higher resolution.  
+An integrated input multiplexer can select from external I/Os and several internal signals. With PRS and DMA, the IADC can operate without CPU intervention, minimizing current consumption or allowing the core to do other work. The IADC can be clocked at different speeds, run using different warm-up modes, and shut down between conversions to reduce the energy consumption even further.  
+This example discusses how to attain 14.3-bit ENOB with oversampling. It also cover offset and gain calibration of the IADC with external reference.  
 
 Key points to attain 14.3 bit ENOB:
 - differential mode

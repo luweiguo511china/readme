@@ -2,16 +2,18 @@
 
 ## Description ##
 
-The EFR32 Wireless Gecko Series 2 IADC is an intermediate architecture combining techniques from both Successive Approximation Register (SAR) and Delta-Sigma style converters. The maximum resolution is 12 bits, which can achieve one million samples per second (1 Msps). The flexible incremental architecture uses oversampling to allow applications to trade speed for higher resolution.  
-An integrated input multiplexer can select from external I/Os and several internal signals. With PRS and DMA, the IADC can operate without CPU intervention, minimizing current consumption or allowing the core to do other work. The IADC can be clocked at different speeds, run using different warm-up modes, and shut down between conversions to reduce the energy consumption even further.  
-This example discusses how to attain 14.3-bit ENOB with oversampling. It also cover offset and gain calibration of the IADC with external reference.  
+The EFR32 Wireless Gecko Series 2 IADC is an intermediate architecture combining techniques from both **Successive Approximation Register (SAR)** and **Delta-Sigma** style converters. The maximum resolution is 12 bits, which can achieve one million samples per second (1 Msps).  
 
-Key points to attain 14.3 bit ENOB:
+The flexible incremental architecture uses **oversampling** to allow applications to trade speed for higher resolution.  
+
+This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It also cover offset and gain **calibration** of the IADC with **external reference**.  
+
+**Key points** to attain 14.3 bit ENOB:
 - differential mode
 - external reference
 - 64+ oversample rate
 
-Peripherals used: IADC, GPIO, I2C, USART, EMU, CMU
+**Peripherals used**: IADC, GPIO, I2C, USART, EMU, CMU
 
 ## Gecko SDK Suite version ##
 
@@ -141,7 +143,7 @@ The application sits in EM1 until an interrupt occurs. The push buttons on the G
 
 
 a. run the code
-b. dump the adc data via vcom
+b. dump the adc data via **vcom**
 c. import the data into excel
 d. calcuate the ENOB
 ## Power Consumption ##
@@ -160,13 +162,13 @@ bluetooth_bgm_iadc.sls
 a. add EFR32BG22C224F512IM32 in my products and select it.
 a. For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with Bluetooth - SoC Empty project.
 b. Add software component Services->IO Stream->IO Stream: USART. also configure it.
-c. Add Add platform->peripheral->iadc
-d. Add platform->peripheral->i2c
+c. Add Add **platform->peripheral->iadc**
+d. Add **platform->peripheral->i2c**
 e. add folder inc and drv.
 f. drag the files into the folder.
 g. add the inc path.
-h. replace the app.c
-e. ignore PTI warning in pintool.
+h. replace the **app.c**
+e. **ignore** PTI warning in pintool.
 
 ## How to Port to Another Part ##
 
@@ -179,7 +181,7 @@ note: only EFR32/EFM32 S2 support this.
 ## Testing ##
 ## How to test ##
 
-## Known Issues ##
+## Known **Issues** ##
 ## Reference ##
 - DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [datasheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)

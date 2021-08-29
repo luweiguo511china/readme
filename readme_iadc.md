@@ -115,7 +115,7 @@ current application size is: ~kB
 
 
 ## API Overview ##
-##General##:
+**General**:
 | API                                   | Comment                               | 
 |---------------------------------------|---------------------------------------|
 | void initLetimer(void);               |  -                                    |
@@ -125,7 +125,7 @@ current application size is: ~kB
 | void debounceButton(void);            | button denouncing                     |
 | float getDieTemperature(void);        | bg22 emu die temperature              |
 
-##dac70501##:
+**dac70501**:
 | API                                             | Comment                                           | 
 |-------------------------------------------------|---------------------------------------------------|
 | uint16_t dac70501_init(void);                   | dac70501 initialization                           |
@@ -135,7 +135,7 @@ current application size is: ~kB
 | uint16_t dac070501_powerDown(uint8_t dac_pwdwn, uint8_t ref_pwdwn); | dac70501 power down           |
 | uint16_t dac70501_reStart(void);                | dac70501 powerup(restart)                         |
 
-- ads1220:
+**ads1220**:
 | API                                             | Comment                      | 
 |-------------------------------------------------|------------------------------|
 | uint32_t ads1220_init(void);                    | ads1220 initialization       |
@@ -144,7 +144,7 @@ current application size is: ~kB
 | void ads1220_Calibrate(void);                   | ads1220 calibration          |
 | void ads1220_powerDown(void);                   | ads1220 power down           |
 
-efr32bg22 adc:
+**efr32bg22 adc**:
 | API                                               | Comment                    | 
 |---------------------------------------------------|----------------------------|
 | void resetIADC(void);                             | bg22 iadc reset            |
@@ -155,7 +155,7 @@ efr32bg22 adc:
 | double iadcPollSingleResult(void);                | bg22 iadc voltage polling  |
 | uint32_t iadcDifferentialCalibrate();             | bg22 iadc calibration      |
 
-- global buffer:
+**global buffer**:
 | API                                               | Comment                    | 
 |---------------------------------------------------|----------------------------|
 | double rmsCal(double buffer[], double adcAve);    | -                          |

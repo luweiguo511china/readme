@@ -13,9 +13,9 @@ Peripherals used: ADC, GPIO, I2C, USART, EMU, CMU
 
 ## Gecko SDK Suite version ##
 
-- Gecko SDK Suite v3.2.1
-- MCU             v6.1.1.0
-- Bluetooth       v3.2.1
+| Gecko SDK Suite | v3.2.1
+| MCU             | v6.1.1.0
+| Bluetooth       | v3.2.1
 
 ## Hardware Required ##
 

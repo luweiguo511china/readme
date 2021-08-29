@@ -1,6 +1,6 @@
-# iadc Example #
+# efr32bg22 iadc enob #
 
-## Summary ##
+## Description ##
 
 This project uses bgm board to evaluate the EFR32BG22 16 bit ADC performance (14.3 ENOB with 32x OVS). 
 a. EMU temperature
@@ -115,6 +115,6 @@ Open the "Project Properties" and navigate to the "C/C++ Build -> Board/Part/SDK
 note: only EFR32/EFM32 S2 support this.
 
 ## reference ##
-DAC70501 datasheet, https://www.ti.com/lit/ds/symlink/dac70501.pdf
+DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 ADC1220 datasheet, https://www.ti.com/lit/ds/symlink/ads1220.pdf
 REF3312 datasheet, https://www.ti.com/product/REF3312

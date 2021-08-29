@@ -99,6 +99,17 @@ C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
 The application sits in EM1 until an interrupt occurs. The push buttons on the GG11 Starter Kit is used to start the TIMER and choose a rotation direction. TIMER1 is set to overflow at a frequency of 200 Hz and set to interrupt in an overflow event. In the TIMER1 interrupt handler, the software sets the coils to the next state in order to step the motor. In order to rotate the motor counter-clockwise, the motor coils need to be driven in the following order: Coil 1 -> Coil 3 -> Coil 2 -> Coil 4. In order to rotate the motor clockwise, the motor coils need to be driven in the following order: Coil 4 -> Coil 2 -> Coil 3 -> Coil 1. The calculateSteps() function determines the number of full steps required to rotate by a specified angle. The desired delta angle can be set using the ANGLE_PER_TRIGGER macro. TIMER1 will continue to interrupt until the motor shaft rotates by the desired angle. Once the desired angle is reached, TIMER1 stops and the application waits for the next pushbutton press.
 
 ### Memory Layout ###
+bootloader + applicatoin nvm3 + ota slot
+```
+|--------------------------------------------|
+|                  nvm3 (24k)                |
+|--------------------------------------------|
+|                 application                |
+|--------------------------------------------|
+|                bootloader (24k)            |
+ --------------------------------------------
+```
+
 ### Software Workflow ###
 
 
@@ -183,6 +194,12 @@ note: only EFR32/EFM32 S2 support this.
 ## How to test ##
 
 ## Known **Issues** ##
+- bgm failure item
+- cgm failure item
+- PTI not used
+- PC05 use as button (port C/D), not support simple button.
+- OTA not support due to flash size.
+
 ## Reference ##
 - DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [datasheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)

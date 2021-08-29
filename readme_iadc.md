@@ -4,7 +4,7 @@
 
 The EFR32 Wireless Gecko Series 2 IADC is an intermediate architecture combining techniques from both **Successive Approximation Register (SAR)** and **Delta-Sigma** style converters. The maximum resolution is 12 bits, which can achieve one million samples per second (1 Msps).  
 
-The flexible incremental architecture uses **oversampling** to allow applications to trade speed for higher resolution.  
+The flexible incremental architecture uses **oversampling** to allow applications to trade speed for **higher resolution**.  
 
 This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It also cover offset and gain **calibration** of the IADC with **external reference**.  
 
@@ -26,11 +26,12 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 - One WSTK [mainboard](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
 - One [bgm board](https://components101.com/motors/28byj-48-stepper-motor)
 
-- Which include 
+- Which includes 
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
   - TI 24-bit Low Power Delta-sigma ADC [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
   - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/product/REF3312)
-- Schematic for the bgm board(https://components101.com/motors/28byj-48-stepper-motor)
+- Schematic for the bgm board
+- ![connection](doc/connection.png)
 
 ## Setup ##
 
@@ -45,7 +46,7 @@ C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\
 The final connections should looks like so:
 
 ## Hardware ##
-Schematic is [here](doc/bgm.pdf)
+Schematic is [here](doc/CGM-Board_Schematic.pdf)
 ### Connection Required ###
 
 ### Pins Function Map ###

@@ -17,10 +17,9 @@ v3.2.1
 
 ## Hardware Required ##
 
-- One WSTK main board
-<https://www.silabs.com/products/development-tools/mcu/32-bit/efm32-giant-gecko-gg11-starter-kit>
-- One bgm board
-<https://components101.com/motors/28byj-48-stepper-motor>
+- One WSTK [mainboard](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
+- One [bgm board] (https://components101.com/motors/28byj-48-stepper-motor)
+
 - Which include 
   -- DAC70501 https://www.ti.com/lit/ds/symlink/dac70501.pdf
   -- ADC1220 https://www.ti.com/lit/ds/symlink/ads1220.pdf
@@ -114,7 +113,7 @@ e. ignore PTI warning in pintool.
 Open the "Project Properties" and navigate to the "C/C++ Build -> Board/Part/SDK" item. Select the new board or part to target and "Apply" the changes.  Note: there may be dependencies that need to be resolved when changing the target architecture.
 note: only EFR32/EFM32 S2 support this.
 
-## reference ##
+## Reference ##
 - DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [datasheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
 - REF3312 [datasheet](https://www.ti.com/product/REF3312)

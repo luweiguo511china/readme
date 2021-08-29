@@ -11,18 +11,20 @@ e. vcom
 
 Peripherals used: ADC, GPIO, I2C, USART, EMU, CMU
 
-## Gecko SDK version ##
+## Gecko SDK Suite version ##
 
-v3.2.1
+- Gecko SDK Suite v3.2.1
+- MCU 6.1.1.0
+- Bluetooth 3.2.1
 
 ## Hardware Required ##
 
 - One WSTK [mainboard](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
-- One [bgm board] (https://components101.com/motors/28byj-48-stepper-motor)
+- One [bgm board](https://components101.com/motors/28byj-48-stepper-motor)
 
 - Which include 
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
-  - TI 24-Bit ADC with Integrated PGA and Reference [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
+  - TI 24-bit Low Power Delta-sigma ADC [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
   - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/product/REF3312)
 - Schematic for the bgm board
 <https://components101.com/motors/28byj-48-stepper-motor>

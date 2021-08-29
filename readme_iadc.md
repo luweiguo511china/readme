@@ -11,7 +11,7 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 **Key points** to attain 14.3 bit ENOB:
 - differential mode
 - external reference
-- 64+ oversample rate
+- 32+ oversample rate
 
 **Peripherals used**: IADC, GPIO, I2C, USART, EMU, CMU
 
@@ -76,16 +76,21 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 
 
 VCOM:
+|-----------|---------------|----------------------|----------------|
 | PA5       | IN1           | OUT1                 | USART0 TX |
 | PA6       | IN1           | OUT1                 | USART0 RX |
 
 LED:
+|-----------|---------------|----------------------|----------------|
 | NO        | IN4           | OUT4                 | SPI INT  |
 Button:
+|-----------|---------------|----------------------|----------------|
 | PC5       | IN4           | OUT4                 | SPI INT  |
+|-----------|---------------|----------------------|----------------|
 CLK OUT:
 | PC3       | IN4           | OUT4                 | SPI INT  |
 PTI:
+|-----------|---------------|----------------------|----------------|
 
 
 Import the included .sls file to Simplicity Studio then build and flash the project to the bgm board.

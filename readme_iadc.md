@@ -115,7 +115,7 @@ current application size is: ~kB
 
 
 ## API Overview ##
-General:
+- General:
 | API | Comment             | 
 |-----------|---------------|
 | void initLetimer(void);               |  -                                    |

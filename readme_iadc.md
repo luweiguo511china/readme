@@ -211,7 +211,7 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 ## Reference ##
 - DAC70501 [data sheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [data sheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
-- REF3312 [data sheet](https://www.ti.com/product/REF3312)
+- REF3312 [data sheet](https://www.ti.com/lit/pdf/sbos392)
 - EFR32BG22 [reference manual](https://www.silabs.com/documents/public/reference-manuals/brd4185a-rm.pdf)
 - EFR32BG22 [data sheet](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
 - [AN1189](https://www.silabs.com/documents/public/application-notes/an1189-efr32-iadc.pdf): Incremental Analog to Digital Converter (IADC)

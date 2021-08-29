@@ -24,7 +24,7 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 ## Hardware Required ##
 
 - One WSTK [mainboard](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
-- One [bgm board](https://components101.com/motors/28byj-48-stepper-motor)
+- One [bgm board](doc/CGM-Board_Schematic.pdf)
 
 - Which includes 
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)

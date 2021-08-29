@@ -155,10 +155,10 @@ current application size is: ~kB
 | double iadcPollSingleResult(void);                | bg22 iadc voltage polling  |
 | uint32_t iadcDifferentialCalibrate();             | bg22 iadc calibration      |
 
-**global buffer**:
+**global**:
 | API                                               | Comment                    | 
 |---------------------------------------------------|----------------------------|
-| double rmsCal(double buffer[], double adcAve);    | -                          |
+| double rmsCal(double buffer[], double adcAve);    | rms calculation            |
 | extern double buffer[ADC_BUFFER_SIZE];            | buffer to save adc data    |
 | extern double adcGainResult;                      | adc gain cal result        |
 | extern double adcOffsetresult;                    | adc offset cal result      |

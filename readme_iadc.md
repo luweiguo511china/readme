@@ -173,9 +173,9 @@ current application size is: ~kB
 bluetooth_bgm_iadc.sls
 
 ## Steps to Create the Project ##
-- a. add EFR32BG22C224F512IM32 in my products and select it.
-- a. For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with Bluetooth - SoC Empty project.
-- b. Add software component Services->IO Stream->IO Stream: USART. also configure it.
+- a. add **EFR32BG22C224F352GM32** in **my Products** and select it.
+- a. For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with **Bluetooth - SoC Empty project**.
+- b. Add software component **Services->IO Stream->IO Stream: USART**. also configure it.
 - c. Add Add **platform->peripheral->iadc**
 - d. Add **platform->peripheral->i2c**
 - e. add folder inc and drv.
@@ -206,9 +206,9 @@ note: only EFR32/EFM32 S2 support this.
 - OTA not support due to flash size. may need lmza to support this on BG22 with 512k flash.
 
 ## Reference ##
-- DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
-- ADC1220 [datasheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
-- REF3312 [datasheet](https://www.ti.com/product/REF3312)
+- DAC70501 [data sheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
+- ADC1220 [data sheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
+- REF3312 [data sheet](https://www.ti.com/product/REF3312)
 - EFR32BG22 [reference manual](https://www.silabs.com/documents/public/reference-manuals/brd4185a-rm.pdf)
 - EFR32BG22 [data sheet](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
 - [AN1189](https://www.silabs.com/documents/public/application-notes/an1189-efr32-iadc.pdf): Incremental Analog to DigitalConverter (IADC)

@@ -13,9 +13,9 @@ Peripherals used: ADC, GPIO, I2C, USART, EMU, CMU
 
 ## Gecko SDK Suite version ##
 
-- Gecko SDK Suite | v3.2.1
-- MCU             | v6.1.1.0
-- Bluetooth       | v3.2.1
+- Gecko SDK Suite v3.2.1
+- MCU v6.1.1.0
+- Bluetooth v3.2.1
 
 ## Hardware Required ##
 
@@ -40,7 +40,8 @@ C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\
 
 The final connections should looks like so:
 
-
+## hardware ##
+Schematic is [here](doc/bgm.pdf)
 
 | EFR32BG22 | REF3312 Input | ULN2003 Output | 28BYJ-48        |
 |------|---------------|----------------|-----------------|

@@ -117,7 +117,7 @@ current application size is: ~kB
 | void initLetimer(void);               |  -                                    |
 | void letimerDelay(uint32_t msec);     | simple delay                          |
 | void initButtonEM2(void);             | button in EM2                         |
-|  void initClockOut(void);             | route clock to pin                    |
+| void initClockOut(void);              | route clock to pin                    |
 | void debounceButton(void);            | button denouncing                     |
 | float getDieTemperature(void);        | bg22 emu die temperature              |
 
@@ -155,11 +155,13 @@ current application size is: ~kB
 | API                                               | Comment                    | 
 |---------------------------------------------------|----------------------------|
 | double rmsCal(double buffer[], double adcAve);    | rms calculation            |
+
+**variable**
+| variable                                          | Comment                    | 
+|---------------------------------------------------|----------------------------|
 | extern double buffer[ADC_BUFFER_SIZE];            | buffer to save adc data    |
 | extern double adcGainResult;                      | adc gain cal result        |
 | extern double adcOffsetresult;                    | adc offset cal result      |
-
-
 
 ## Power Consumption ##
 | Components(Peripheral) | Power Up       | Power Down       | Comment         |

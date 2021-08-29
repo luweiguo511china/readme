@@ -9,7 +9,7 @@ c. button
 d. adc calibration
 e. vcom
 
-Peripherals used: ADC, GPIO, I2C, USART, EMU, CMU
+Peripherals used: IADC, GPIO, I2C, USART, EMU, CMU
 
 ## Gecko SDK Suite version ##
 
@@ -26,8 +26,8 @@ Peripherals used: ADC, GPIO, I2C, USART, EMU, CMU
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
   - TI 24-bit Low Power Delta-sigma ADC [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
   - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/product/REF3312)
-- Schematic for the bgm board
-<https://components101.com/motors/28byj-48-stepper-motor>
+- Schematic for the bgm board(https://components101.com/motors/28byj-48-stepper-motor)
+
 ## Setup ##
 
 Connect bgm board with WSTK main board via Simplicity 10 pins adater, and connect WSTK main board to PC via mini USB.
@@ -42,6 +42,9 @@ The final connections should looks like so:
 
 ## Hardware ##
 Schematic is [here](doc/bgm.pdf)
+### Connection Required ###
+
+### Pins Function Map ###
 
 | EFR32BG22 | REF3312       | Direction (wrt BG22) | Comment         |
 |-----------|---------------|----------------------|-----------------|
@@ -90,7 +93,12 @@ C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
 
 The application sits in EM1 until an interrupt occurs. The push buttons on the GG11 Starter Kit is used to start the TIMER and choose a rotation direction. TIMER1 is set to overflow at a frequency of 200 Hz and set to interrupt in an overflow event. In the TIMER1 interrupt handler, the software sets the coils to the next state in order to step the motor. In order to rotate the motor counter-clockwise, the motor coils need to be driven in the following order: Coil 1 -> Coil 3 -> Coil 2 -> Coil 4. In order to rotate the motor clockwise, the motor coils need to be driven in the following order: Coil 4 -> Coil 2 -> Coil 3 -> Coil 1. The calculateSteps() function determines the number of full steps required to rotate by a specified angle. The desired delta angle can be set using the ANGLE_PER_TRIGGER macro. TIMER1 will continue to interrupt until the motor shaft rotates by the desired angle. Once the desired angle is reached, TIMER1 stops and the application waits for the next pushbutton press.
 
-## How to test ##
+### Memory Layout ###
+### Software Workflow ###
+### API Overview ###
+
+
+
 a. run the code
 b. dump the adc data via vcom
 c. import the data into excel
@@ -116,8 +124,12 @@ e. ignore PTI warning in pintool.
 
 Open the "Project Properties" and navigate to the "C/C++ Build -> Board/Part/SDK" item. Select the new board or part to target and "Apply" the changes.  Note: there may be dependencies that need to be resolved when changing the target architecture.
 note: only EFR32/EFM32 S2 support this.
-## Memory Layout ##
 
+
+
+
+## Testing ##
+## How to test ##
 
 ## Known Issues ##
 ## Reference ##

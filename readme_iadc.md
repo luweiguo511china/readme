@@ -116,13 +116,13 @@ current application size is: ~kB
 
 ## API Overview ##
 - General  
-  | API                                   |  Comment                              |
-  | void initLetimer(void);               |  -                                    |
-  | void letimerDelay(uint32_t msec);     | simple delay                          |
-  | void initButtonEM2(void);             | button in EM2                         |
-  |  void initClockOut(void);             | route clock to pin                    |
-  | void debounceButton(void);            | button denouncing                     |
-  | float getDieTemperature(void);        | bg22 emu die temperature              |
+| API                                   |  Comment                              |
+| void initLetimer(void);               |  -                                    |
+| void letimerDelay(uint32_t msec);     | simple delay                          |
+| void initButtonEM2(void);             | button in EM2                         |
+|  void initClockOut(void);             | route clock to pin                    |
+| void debounceButton(void);            | button denouncing                     |
+| float getDieTemperature(void);        | bg22 emu die temperature              |
 
 - dac70501  
   | uint16_t dac70501_init(void);                   | dac70501 initialization |

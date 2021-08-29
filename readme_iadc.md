@@ -115,9 +115,8 @@ current application size is: ~kB
 
 
 ## API Overview ##
-- General:
+##General##:
 | API | Comment             | 
-|-----------|---------------|
 | void initLetimer(void);               |  -                                    |
 | void letimerDelay(uint32_t msec);     | simple delay                          |
 | void initButtonEM2(void);             | button in EM2                         |
@@ -125,13 +124,14 @@ current application size is: ~kB
 | void debounceButton(void);            | button denouncing                     |
 | float getDieTemperature(void);        | bg22 emu die temperature              |
 
-- dac70501  
-  | uint16_t dac70501_init(void);                   | dac70501 initialization |
-  | float dac70501_readRef(void);                   | dac70501 voltage read |
-  | uint16_t dac70501_setRef(uint8_t dacValueHigh, uint8_t dacValueLow); | dac70501 output register set |
-  | uint16_t dac70501_setVolt(float voltValue);     | dac70501 voltage set |
-  | uint16_t dac070501_powerDown(uint8_t dac_pwdwn, uint8_t ref_pwdwn); | dac70501 power down |
-  | uint16_t dac70501_reStart(void);                | dac70501 powerup(restart) |
+##dac70501##:
+| API | Comment             | 
+| uint16_t dac70501_init(void);                   | dac70501 initialization |
+| float dac70501_readRef(void);                   | dac70501 voltage read |
+| uint16_t dac70501_setRef(uint8_t dacValueHigh, uint8_t dacValueLow); | dac70501 output register set |
+| uint16_t dac70501_setVolt(float voltValue);     | dac70501 voltage set |
+| uint16_t dac070501_powerDown(uint8_t dac_pwdwn, uint8_t ref_pwdwn); | dac70501 power down |
+| uint16_t dac70501_reStart(void);                | dac70501 powerup(restart) |
 
 - ads1220  
   | uint32_t ads1220_init(void);                   | ads1220 initialization |

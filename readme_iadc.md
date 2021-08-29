@@ -39,7 +39,7 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 Connect bgm board with WSTK main board via Simplicity 10 pins adapter, and connect WSTK main board to PC via mini USB.
 - Set the debug mode as **'OUT'**.
 - Set **target device** in Simplicity Studio launcher as EFR32BG22C224F352GM32.
-- Read back the **Secure FEW** version.
+- Read back the **Secure FW** version.
 - Flash the **bootloader** first via **Simplicity commander** or **flash programmer**.
 - C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
@@ -187,17 +187,17 @@ bluetooth_bgm_iadc.sls
 
 ## How to Port to Another Part ##
 
-Open the "Project Properties" and navigate to the "C/C++ Build -> Board/Part/SDK" item. Select the new board or part to target and "Apply" the changes.  Note: there may be dependencies that need to be resolved when changing the target architecture.
-note: only EFR32/EFM32 S2 support this.
-
+Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/SDK** item. Select the new board or part to target and **Apply** the changes.  
+**Note**: there may be dependencies that need to be resolved when changing the target architecture.
+note: ONLY EFR32/EFM32 S2 support this 16-bit ENOB.
 
 ## Testing ##
 
-## How to test ##
-- a. run the code
-- b. dump the adc data via **vcom**
-- c. import the data into excel
-- d. calcuate the ENOB
+## How to Test ##
+- run the code
+- dump the adc data via **vcom**
+- import the data into excel
+- calcuate the ENOB
 
 ## Known **Issues** ##
 - bgm failure item

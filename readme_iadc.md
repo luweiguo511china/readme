@@ -120,3 +120,6 @@ note: only EFR32/EFM32 S2 support this.
 - DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [datasheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
 - REF3312 [datasheet](https://www.ti.com/product/REF3312)
+- EFR32BG22 [reference manual](https://www.silabs.com/documents/public/reference-manuals/brd4185a-rm.pdf)
+- EFR32BG22 [data sheet](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
+- [AN1189: Incremental Analog to Digital Converter (IADC)] (https://www.silabs.com/documents/public/application-notes/an1189-efr32-iadc.pdf)

@@ -105,10 +105,10 @@ The application sits in EM1 until an interrupt occurs. The push buttons on the G
 ## API Overview ##
 - General
   - void initLetimer(void);
-  - void letimerDelay(uint32_t msec); &nbsp; &nbsp; &nbsp; /* simple delay */
-  - void initButtonEM2(void); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* button in EM2 */
-  - void initClockOut(void); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* route clock to pin */
-  - void debounceButton(void); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* button denouncing */
+  - void letimerDelay(uint32_t msec); &nbsp; &nbsp; &nbsp;                /* simple delay */
+  - void initButtonEM2(void); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         /* button in EM2 */
+  - void initClockOut(void); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* route clock to pin */
+  - void debounceButton(void); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* button denouncing */
   - float getDieTemperature(void);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* bg22 emu die temperature */
 
 - dac70501

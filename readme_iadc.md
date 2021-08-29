@@ -55,47 +55,47 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 
 | EFR32BG22 | REF3312       | Direction (wrt BG22) | Comment         |
 |-----------|---------------|----------------------|-----------------|
-| PA0       | IN1           | OUT1                 | ADC reference   |
+| PA0       | AIN           | IN                   | ADC reference   |
 | GND       | GND           |                      |                 |
 
-| EFR32BG22 | ADC Input     | Direction (wrt BG22) | Comment   |
+| EFR32BG22 | ADC Input     | Direction (wrt BG22) | Comment         |
 |-----------|---------------|----------------------|-----------------|
-| PD0       | IN1           | AIN                  | ADC INPUT       |
-| PD1       | IN2           | AIN                  | ADC INPUT       |
+| PD0       | AIN           | IN                   | ADC Pos INPUT   |
+| PD1       | AIN           | IN                   | ADC Neg INPUT   |
 |-----------|---------------|----------------------|-----------------|
 | PC0       | IN1           | OUT1                 | ADC INPUT       |
 | PC1       | IN2           | OUT2                 | ADC INPUT       |
 
 | EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
 |-----------|---------------|----------------------|----------------|
-| PA3       | IN1           | OUT1                 | SPI MISO       |
-| PA4       | IN2           | OUT2                 | SPI MOSI       |
-| PC4       | IN3           | OUT3                 | SPI CLK        |
-| PC2       | IN4           | OUT4                 | SPI CS         |
+| PA3       | IN1           | IN                 | SPI MISO       |
+| PA4       | IN2           | OUT                 | SPI MOSI       |
+| PC4       | IN3           | OUT                 | SPI CLK        |
+| PC2       | IN4           | OUT                 | SPI CS         |
 | PB0       | IN4           | OUT4                 | SPI INT        |
 
 VCOM, LED, Button, CLK OUT, PTI:
 | EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
 |-----------|---------------|----------------------|----------------|
-| PA5       | IN1           | OUT1                 | USART0 TX |
-| PA6       | IN1           | OUT1                 | USART0 RX |
-| NO        | IN4           | OUT4                 | SPI INT  |
-| PC5       | IN4           | OUT4                 | SPI INT  |
-| PC3       | IN4           | OUT4                 | SPI INT  |
+| PA5       | DOUT          | OUT                  | USART0 TX      |
+| PA6       | DIN           | IN                   | USART0 EX      |
+| NO        | DIN           | OUT                  | SPI INT        |
+| PC5       | DIN           | IN                   | button         |
+| PC3       | DOUT          | OUT                  | clock out      |
 
 
-Import the included .sls file to Simplicity Studio then build and flash the project to the bgm board.
-In Simplicity Studio select "File->Import" and navigate to the directory with the .sls project file.
+Import the included **.sls** file to **Simplicity STUDIO** then build and flash the project to the bgm board.
+In Simplicity Studio select **File->Import** and navigate to the directory with the **.sls** project file.
 The project is built with relative paths to the STUDIO_SDK_LOC variable which was defined as
 
 C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
 
 ## How the Project Works ##
 
-The application sits in EM1 until an interrupt occurs. The push buttons on the GG11 Starter Kit is used to start the TIMER and choose a rotation direction. TIMER1 is set to overflow at a frequency of 200 Hz and set to interrupt in an overflow event. In the TIMER1 interrupt handler, the software sets the coils to the next state in order to step the motor. In order to rotate the motor counter-clockwise, the motor coils need to be driven in the following order: Coil 1 -> Coil 3 -> Coil 2 -> Coil 4. In order to rotate the motor clockwise, the motor coils need to be driven in the following order: Coil 4 -> Coil 2 -> Coil 3 -> Coil 1. The calculateSteps() function determines the number of full steps required to rotate by a specified angle. The desired delta angle can be set using the ANGLE_PER_TRIGGER macro. TIMER1 will continue to interrupt until the motor shaft rotates by the desired angle. Once the desired angle is reached, TIMER1 stops and the application waits for the next pushbutton press.
+The application sits in EM2 until an interrupt occurs. The push buttons on the GG11 Starter Kit is used to start the TIMER and choose a rotation direction. TIMER1 is set to overflow at a frequency of 200 Hz and set to interrupt in an overflow event. In the TIMER1 interrupt handler, the software sets the coils to the next state in order to step the motor. In order to rotate the motor counter-clockwise, the motor coils need to be driven in the following order: Coil 1 -> Coil 3 -> Coil 2 -> Coil 4. In order to rotate the motor clockwise, the motor coils need to be driven in the following order: Coil 4 -> Coil 2 -> Coil 3 -> Coil 1. The calculateSteps() function determines the number of full steps required to rotate by a specified angle. The desired delta angle can be set using the ANGLE_PER_TRIGGER macro. TIMER1 will continue to interrupt until the motor shaft rotates by the desired angle. Once the desired angle is reached, TIMER1 stops and the application waits for the next pushbutton press.
 
 ### Memory Layout ###
-bootloader + applicatoin nvm3 + ota slot
+bootloader + application + nvm3 + ota slot
 ```
 |--------------------------------------------|
 |                      nvm3 (24k)            |

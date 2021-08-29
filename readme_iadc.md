@@ -116,7 +116,10 @@ e. ignore PTI warning in pintool.
 
 Open the "Project Properties" and navigate to the "C/C++ Build -> Board/Part/SDK" item. Select the new board or part to target and "Apply" the changes.  Note: there may be dependencies that need to be resolved when changing the target architecture.
 note: only EFR32/EFM32 S2 support this.
+## Memory Layout ##
 
+
+## Known Issues ##
 ## Reference ##
 - DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [datasheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)

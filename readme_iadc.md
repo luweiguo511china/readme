@@ -177,7 +177,7 @@ bluetooth_bgm_iadc.sls
 
 ## Steps to Create the Project ##
 - add **EFR32BG22C224F352GM32** in **my Products** and select it.
-- For EFR32BG22C224F512IM32 (EFR32BG22C112F352GM32), start with **Bluetooth - SoC Empty project**.
+- Start with **Bluetooth - SoC Empty project**.
 - Add software component **Services->IO Stream->IO Stream: USART**. also configure it.
 - Add Add **platform->peripheral->iadc**
 - Add **platform->peripheral->i2c**

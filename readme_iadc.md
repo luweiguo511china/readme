@@ -115,7 +115,7 @@ current application size is: ~kB
 
 
 ## API Overview ##
-- General  
+
 | API                                   |  Comment                              |
 | void initLetimer(void);               |  -                                    |
 | void letimerDelay(uint32_t msec);     | simple delay                          |

@@ -102,13 +102,14 @@ The application sits in EM1 until an interrupt occurs. The push buttons on the G
 bootloader + applicatoin nvm3 + ota slot
 ```
 |--------------------------------------------|
-|                  nvm3 (24k)                |
+|                      nvm3 (24k)            |
 |--------------------------------------------|
-|                 application                |
+|              application (464k)            |
 |--------------------------------------------|
 |                bootloader (24k)            |
  --------------------------------------------
 ```
+current application size is: ~kB
 
 ### Software Workflow ###
 
@@ -198,7 +199,7 @@ note: only EFR32/EFM32 S2 support this.
 - cgm failure item
 - PTI not used
 - PC05 use as button (port C/D), not support simple button.
-- OTA not support due to flash size.
+- OTA not support due to flash size. may need lmza to support this on BG22 with 512k flash.
 
 ## Reference ##
 - DAC70501 [datasheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)

@@ -115,11 +115,9 @@ current application size is: ~kB
 
 
 ## API Overview ##
-| API | Comment       | 
+General:
+| API | Comment             | 
 |-----------|---------------|
-| PA0       | IN1           | 
-| GND       | GND           |
-| API                                   |  Comment                              |
 | void initLetimer(void);               |  -                                    |
 | void letimerDelay(uint32_t msec);     | simple delay                          |
 | void initButtonEM2(void);             | button in EM2                         |

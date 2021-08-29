@@ -188,8 +188,9 @@ bluetooth_bgm_iadc.sls
 ## How to Port to Another Part ##
 
 Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/SDK** item. Select the new board or part to target and **Apply** the changes.  
-**Note**: there may be dependencies that need to be resolved when changing the target architecture.
-note: ONLY EFR32/EFM32 S2 support this 16-bit ENOB.
+**Note**: 
+- There may be dependencies that need to be resolved when changing the target architecture.
+- ONLY EFR32/EFM32 S2 support this 16-bit ENOB.
 
 ## Testing ##
 

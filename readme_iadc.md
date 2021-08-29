@@ -21,9 +21,9 @@ v3.2.1
 - One [bgm board] (https://components101.com/motors/28byj-48-stepper-motor)
 
 - Which include 
-  -- DAC70501 https://www.ti.com/lit/ds/symlink/dac70501.pdf
-  -- ADC1220 https://www.ti.com/lit/ds/symlink/ads1220.pdf
-  -- REF3312 https://www.ti.com/product/REF3312
+  -- TI 14-bit Voltage-Output DAC [DAC70501] (https://www.ti.com/lit/ds/symlink/dac70501.pdf)
+  -- TI 24-Bit ADC with Integrated PGA and Reference [ADC1220] (https://www.ti.com/lit/ds/symlink/ads1220.pdf)
+  -- TI Low Drift Voltage Reference [REF3312] (https://www.ti.com/product/REF3312)
 - Schematic for the bgm board
 <https://components101.com/motors/28byj-48-stepper-motor>
 ## Setup ##

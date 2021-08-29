@@ -32,7 +32,6 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
   - TI 24-bit Low Power Delta-sigma ADC [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
   - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/product/REF3312)
   - Silabs [EFR32BG22](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
-- Schematic for the bgm board
 
 ## Setup ##
 

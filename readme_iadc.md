@@ -142,6 +142,7 @@ current application size is: ~kB
 | double buffer[ADC_BUFFER_SIZE];                 | buffer to save adc data      |
 | double adcGainResult;                           | adc gain cal result          |
 | double adcOffsetresult;                         | adc offset cal result        |
+| double adcEnobResult;                           | adc enob result              |
 
 ## Power Consumption ##
 | Components(Peripheral) | Power Up       | Power Down       | Comment         |

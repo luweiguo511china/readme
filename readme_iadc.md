@@ -193,8 +193,6 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 - There may be dependencies that need to be resolved when changing the target architecture.
 - ONLY EFR32/EFM32 S2 support this 16-bit ENOB.
 
-## Testing ##
-
 ## How to Test ##
 - Run the code
 - dump the adc data via **vcom**

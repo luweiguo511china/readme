@@ -42,7 +42,7 @@ ENOB is calculated based on below **formula**:
 - Set **Target part** in Simplicity Studio **Launcher->Debug Adapter->Device Configuration->Device hardware** as EFR32BG22C224F352GM32.
 - Read the **Secure FW** version.
 - Flash the **bootloader** first via **Simplicity Commander** or **Flash Programmer**.
-- The pre-build bootloader is in folder like instal_path\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
+- The **pre-build** bootloader is in folder like instal_path\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
 The final **connections** should look like so:
 ![brd4001a+bgm](images/bgm-iadc-connection.png)

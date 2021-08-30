@@ -136,7 +136,7 @@ current application size is: ~kB
 |-------------------------------------------------|------------------------------|
 | double rmsCal(double buffer[], double adcAve);  | rms calculation              |
 
-**variable**
+**variable**:
 | variable                                        | Comment                      | 
 |-------------------------------------------------|------------------------------|
 | double buffer[ADC_BUFFER_SIZE];                 | buffer to save adc data      |

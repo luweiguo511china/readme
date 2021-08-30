@@ -58,12 +58,12 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 | PD1       |  ADC Neg input   |
 | PC0       |  ADC Pos input   |
 | PC1       |  ADC Neg input   |
-| PA3       |  SPI MISO        |
-| PA4       |  SPI MOSI        |
-| PC4       |  SPI CLK         |
-| PC2       |  SPI CS          |
-| PA5       |  USART0 TX       |
-| PA6       |  USART0 EX       |
+| PA3       |  SPI/USART0 MISO |
+| PA4       |  SPI/USART0 MOSI |
+| PC4       |  SPI/USART0 CLK  |
+| PC2       |  SPI/USART0 CS   |
+| PA5       |  USART1 TX       |
+| PA6       |  USART1 EX       |
 | PB0       |  LED             |
 | PC5       |  button          |
 | PC3       |  clock out       |
@@ -80,12 +80,14 @@ C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
 The application sits in EM2 until an interrupt occurs. The push buttons on the GG11 Starter Kit is used to start the TIMER and choose a rotation direction. TIMER1 is set to overflow at a frequency of 200 Hz and set to interrupt in an overflow event. In the TIMER1 interrupt handler, the software sets the coils to the next state in order to step the motor. In order to rotate the motor counter-clockwise, the motor coils need to be driven in the following order: Coil 1 -> Coil 3 -> Coil 2 -> Coil 4. In order to rotate the motor clockwise, the motor coils need to be driven in the following order: Coil 4 -> Coil 2 -> Coil 3 -> Coil 1. The calculateSteps() function determines the number of full steps required to rotate by a specified angle. The desired delta angle can be set using the ANGLE_PER_TRIGGER macro. TIMER1 will continue to interrupt until the motor shaft rotates by the desired angle. Once the desired angle is reached, TIMER1 stops and the application waits for the next pushbutton press.
 
 ### Memory Layout ###
-bootloader + application + nvm3 + ota slot
+bootloader + application + nvm3 + ota slot  
 ```
+|--------------------------------------------|
+|                 lock bytes (8k)            |
 |--------------------------------------------|
 |                      nvm3 (24k)            |
 |--------------------------------------------|
-|              application (464k)            |
+|              application (296k)            |
 |--------------------------------------------|
 |                bootloader (24k)            |
  --------------------------------------------

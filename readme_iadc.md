@@ -105,7 +105,6 @@ current application size is: ~kB
 | void letimerDelay(uint32_t msec);     | simple delay                          |
 | void initButtonEM2(void);             | button in EM2                         |
 | void initClockOut(void);              | route clock to pin                    |
-| void debounceButton(void);            | button denouncing                     |
 | float getDieTemperature(void);        | bg22 emu die temperature              |
 
 **dac70501**:
@@ -116,39 +115,39 @@ current application size is: ~kB
 | uint16_t dac70501_setRef(uint8_t dacValueHigh, uint8_t dacValueLow); | dac70501 output register set |
 | uint16_t dac70501_setVolt(float voltValue);     | dac70501 voltage set                              |
 | uint16_t dac070501_powerDown(uint8_t dac_pwdwn, uint8_t ref_pwdwn); | dac70501 power down           |
-| uint16_t dac70501_reStart(void);                | dac70501 powerup(restart)                         |
+| uint16_t dac70501_reStart(void);                | dac70501 power up(restart)                        |
 
 **ads1220**:
 | API                                             | Comment                      | 
 |-------------------------------------------------|------------------------------|
 | uint32_t ads1220_init(void);                    | ads1220 initialization       |
-| double ads1220_getAdcTemp(void);                | ads1220 temperature          |
+| double ads1220_getAdcTemp(void);                | ads1220 get temperature      |
 | double ads1220_getAdcDataVolt(void);            | ads1220 get voltage          |
 | void ads1220_Calibrate(void);                   | ads1220 calibration          |
 | void ads1220_powerDown(void);                   | ads1220 power down           |
 
 **efr32bg22 adc**:
-| API                                               | Comment                    | 
-|---------------------------------------------------|----------------------------|
-| void resetIADC(void);                             | bg22 iadc reset            |
-| void rescaleIADC(uint32_t newScale);              | bg22 iadc rescale          |
-| void initIADC(void);                              | bg22 iadc initialization   |
-| void bg22SaveCalData(uint32_t scale);             | bg22 iadc cal data save    |
-| void bg22RestoreCalData(void);                    | bg22 iadc cal data restore |
-| double iadcPollSingleResult(void);                | bg22 iadc voltage polling  |
-| uint32_t iadcDifferentialCalibrate();             | bg22 iadc calibration      |
+| API                                             | Comment                      | 
+|-------------------------------------------------|------------------------------|
+| void resetIADC(void);                           | bg22 iadc reset              |
+| void rescaleIADC(uint32_t newScale);            | bg22 iadc rescale            |
+| void initIADC(void);                            | bg22 iadc initialization     |
+| void bg22SaveCalData(uint32_t scale);           | bg22 iadc cal data save      |
+| void bg22RestoreCalData(void);                  | bg22 iadc cal data restore   |
+| double iadcPollSingleResult(void);              | bg22 iadc voltage polling    |
+| uint32_t iadcDifferentialCalibrate();           | bg22 iadc calibration        |
 
 **global**:
-| API                                               | Comment                    | 
-|---------------------------------------------------|----------------------------|
-| double rmsCal(double buffer[], double adcAve);    | rms calculation            |
+| API                                             | Comment                      | 
+|-------------------------------------------------|------------------------------|
+| double rmsCal(double buffer[], double adcAve);  | rms calculation              |
 
 **variable**
-| variable                                   | Comment                    | 
-|--------------------------------------------|----------------------------|
-| double buffer[ADC_BUFFER_SIZE];            | buffer to save adc data    |
-| double adcGainResult;                      | adc gain cal result        |
-| double adcOffsetresult;                    | adc offset cal result      |
+| variable                                        | Comment                      | 
+|-------------------------------------------------|------------------------------|
+| double buffer[ADC_BUFFER_SIZE];                 | buffer to save adc data      |
+| double adcGainResult;                           | adc gain cal result          |
+| double adcOffsetresult;                         | adc offset cal result        |
 
 ## Power Consumption ##
 | Components(Peripheral) | Power Up       | Power Down       | Comment         |

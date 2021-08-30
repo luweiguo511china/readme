@@ -156,30 +156,33 @@ current application size is: ~kB
 bluetooth_bgm_iadc.sls
 
 ## Steps to Create the Project ##
-- add **EFR32BG22C224F352GM32** in **my Products** and select it.
+
+- add **EFR32BG22C224F352GM32** in **Launcher->My Products** and **select** it.
 - Start with **Bluetooth - SoC Empty project**.
-- Add software component **Services->IO Stream->IO Stream: USART**. also configure it.
-- Add Add **platform->peripheral->iadc**
+- Add software component **Services->IO Stream->IO Stream: USART**, also configure it.
+- Add **platform->peripheral->iadc**
 - Add **platform->peripheral->i2c**
-- add folder inc and drv.
-- drag the files into the folder.
-- add the inc path.
-- replace the **app.c**
+- Add folder **inc** and **drv**.
+- **drag** the source and header files into the folder.
+- Add the inc path **C/C++ Build->Settings->Tool Settings->GNU ARC C Compile->Includes->Include paths**.
+- **Replace** the **app.c**
 - **ignore** PTI warning in pintool.
 
 ## How to Port to Another Part ##
 
-Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/SDK** item. Select the new board or part to target and **Apply** the changes.  
+Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/SDK** item. Select the new **Board** or **Part** to target and **Apply** the changes.  
 **Note**: 
-- There may be dependencies that need to be resolved when changing the target architecture.
-- ONLY EFR32/EFM32 S2 support this 16-bit ENOB.
+- There may be **dependencies** that need to be resolved when changing the target architecture.
+- **ONLY** EFR32/EFM32 S2 support this 16-bit ENOB.
 
 ## How to Test ##
-Import the included **.sls** file to **Simplicity Studio** then build and flash the project to the bgm board.
-In Simplicity Studio select **File->Import** and navigate to the directory with the **.sls** project file.
-The project is built with relative paths to the STUDIO_SDK_LOC variable which was defined as  
+
+Import the included **.sls** file to **Simplicity Studio** then **build** and **flash** the project to the bgm board.
+In Simplicity Studio select **File->Import** and **navigate** to the directory with the **.sls** project file.
+The project is built with **relative paths** to the STUDIO_SDK_LOC variable which was defined as  
 C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
 
+Then:
 - **Run** the code in EFR32BG22
 - **Open** EFR connect app, **filter** bluetooth_bgm_iadc, **connect** it
 - EFR32BG22 **EMU Die Temperature**, UUID **b97a8a77-f1fd-4a13-a492-05360de078cd**, read EFR32BG22 chipset die temperature
@@ -190,13 +193,14 @@ C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
 ![gain](images/bgm-iadc-gain.png)  
 
 ## Known **Issues** ##
+
 - bgm failure item
 - cgm failure item
-- PTI not used
-- PC05 use as button (port C/D), not support simple button.
-- OTA is not supported, due to flash size limitation. may need lmza to support this on BG22 with 512k flash.
+- **PTI** not used
+- PC05 use as button (port C/D), not support by **simple button** component.
 
 ## Reference ##
+
 - DAC70501 [data sheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [data sheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
 - REF3312 [data sheet](https://www.ti.com/lit/pdf/sbos392)

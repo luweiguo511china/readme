@@ -25,7 +25,7 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 
 - One WSTK [mainboard](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
 - One [bgm board](doc/CGM-Board_Schematic.pdf)
-![connection](images/connection.png)
+![diagram](images/bgm-iadc-diagram.png)
 
 - Which includes: 
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)

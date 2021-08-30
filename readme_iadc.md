@@ -17,14 +17,14 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 
 ## Gecko SDK Suite version ##
 
-- Gecko SDK Suite v3.2.1
+- **Gecko SDK Suite** v3.2.1
 - MCU v6.1.1.0
 - Bluetooth v3.2.1
 
 ## Hardware Required ##
 
-- One WSTK [mainboard](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
-- One [bgm board](doc/CGM-Board_Schematic.pdf)
+- One WSTK [**mainboard**](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
+- One [**bgm board**](doc/CGM-Board_Schematic.pdf)
 ![diagram](images/bgm-iadc-diagram.png)
 
 - Which includes: 
@@ -35,12 +35,12 @@ This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It
 
 ## Setup ##
 
-Connect bgm board with WSTK **mainboard** via **Simplicity 10 pins Adapter**, and connect WSTK main board to PC via **mini USB**.
-- Set the debug mode as **OUT**.
-- Set **target device** in Simplicity Studio **Launcher->Adapter** as EFR32BG22C224F352GM32.
-- Read back the **Secure FW** version.
-- Flash the **bootloader** first via **Simplicity commander** or **flash programmer**.
-- C:\Sinstal_path\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
+**Connect** bgm board with WSTK **mainboard** via **Simplicity 10 pins Adapter**, and connect WSTK main board to **PC** via **mini USB**.
+- Set the **Debug Mode** as **Externa Device (OUT)**.
+- Set **Target part** in Simplicity Studio **Launcher->Debug Adapter->Device Configuration->Device hardware** as EFR32BG22C224F352GM32.
+- Read the **Secure FW** version.
+- Flash the **bootloader** first via **Simplicity Commander** or **Flash Programmer**.
+- The pre-build bootloader is in folder like instal_path\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
 The final **connections** should looks like so:
 ![brd4001a+bgm](images/bgm-iadc-connection.png)
@@ -48,30 +48,21 @@ The final **connections** should looks like so:
 ## Hardware ##
 
 Schematic is [here](doc/CGM-Board_Schematic.pdf)
-### Connection Required ###
 
 ### Pins Function Map ###
 
-| EFR32BG22 | REF3312       | Direction (wrt BG22) | Comment         |
-|-----------|---------------|----------------------|-----------------|
-| PA0       | AIN           | IN                   | ADC reference   |
-| GND       | GND           |                      |                 |
+| EFR32BG22 |  Comment         |
+|-----------|------------------|
+| PA0       |  ADC reference   |
+| PD0       |  ADC Pos input   |
+| PD1       |  ADC Neg input   |
+| PC0       |  ADC Pos input   |
+| PC1       |  ADC Neg input   |
+| PA3       |  SPI MISO        |
+| PA4       |  SPI MOSI        |
+| PC4       |  SPI CLK         |
+| PC2       |  SPI CS          |
 
-| EFR32BG22 | ADC Input     | Direction (wrt BG22) | Comment         |
-|-----------|---------------|----------------------|-----------------|
-| PD0       | AIN           | IN                   | ADC Pos INPUT   |
-| PD1       | AIN           | IN                   | ADC Neg INPUT   |
-|-----------|---------------|----------------------|-----------------|
-| PC0       | IN1           | OUT1                 | ADC INPUT       |
-| PC1       | IN2           | OUT2                 | ADC INPUT       |
-
-| EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
-|-----------|---------------|----------------------|----------------|
-| PA3       | IN1           | IN                 | SPI MISO       |
-| PA4       | IN2           | OUT                 | SPI MOSI       |
-| PC4       | IN3           | OUT                 | SPI CLK        |
-| PC2       | IN4           | OUT                 | SPI CS         |
-| PB0       | IN4           | OUT4                 | SPI INT        |
 
 VCOM, LED, Button, CLK OUT, PTI:
 | EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |

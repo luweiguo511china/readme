@@ -51,7 +51,7 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 
 ### Pins Function Map ###
 
-| EFR32BG22 |  Comment         |
+| EFR32BG22 | Comment          |
 |-----------|------------------|
 | PA0       |  ADC reference   |
 | PD0       |  ADC Pos input   |

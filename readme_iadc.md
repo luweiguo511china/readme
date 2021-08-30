@@ -185,7 +185,7 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 - **Open** EFR connect app, **filter** bluetooth_bgm_iadc, **connect** it
 - EFR32BG22 **EMU Die Temperature**, UUID **b97a8a77-f1fd-4a13-a492-05360de078cd**, read EFR32BG22 chipset die temperature
 - Calibration **Offset** result of ADC(mV), UUID **7489487f-3519-455e-8e1b-1e9dc56c3ba9**
-- Calibration **Gain** result of ADC(mV), UUID **7489487f-3519-455e-8e1b-1e9dc56c3ba9**
+- Calibration **Gain** result of ADC(mV), UUID **4a9e0629-48a0-4a89-9314-6f6c70879c6d**  
 ![temperature](images/bgm-iadc-temperature.png)  
 ![offset](images/bgm-iadc-offset.png)  
 ![gain](images/bgm-iadc-gain.png)  

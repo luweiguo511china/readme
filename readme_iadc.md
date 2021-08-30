@@ -90,7 +90,7 @@ bootloader + application + nvm3 + lock bytes
 |              application (296k)            |
 |--------------------------------------------|
 |                bootloader (24k)            |
- --------------------------------------------
+|--------------------------------------------|
 ```
 current application size is: ~kB
 

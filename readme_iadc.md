@@ -181,10 +181,14 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 - ONLY EFR32/EFM32 S2 support this 16-bit ENOB.
 
 ## How to Test ##
-- Run the code
-- dump the adc data via **vcom**
-- aa
-- calcuate the ENOB
+- **Run** the code in EFR32BG22
+- **Open** EFR connect app, **filter** bluetooth_bgm_iadc, **connect** it
+- EFR32BG22 **EMU Die Temperature**, UUID **b97a8a77-f1fd-4a13-a492-05360de078cd**, read EFR32BG22 chipset die temperature
+- Calibration **Offset** result of ADC(mV), UUID **7489487f-3519-455e-8e1b-1e9dc56c3ba9**
+- Calibration **Gain** result of ADC(mV), UUID **7489487f-3519-455e-8e1b-1e9dc56c3ba9**
+![temperature](images/bgm-iadc-temperature.png)  
+![offset](images/bgm-iadc-offset.png)  
+![gain](images/bgm-iadc-gain.png)  
 
 ## Known **Issues** ##
 - bgm failure item

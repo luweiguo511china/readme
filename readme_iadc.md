@@ -62,16 +62,11 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 | PA4       |  SPI MOSI        |
 | PC4       |  SPI CLK         |
 | PC2       |  SPI CS          |
-
-
-VCOM, LED, Button, CLK OUT, PTI:
-| EFR32BG22 | ADC1220       | Direction (wrt BG22) | Comment        |
-|-----------|---------------|----------------------|----------------|
-| PA5       | DOUT          | OUT                  | USART0 TX      |
-| PA6       | DIN           | IN                   | USART0 EX      |
-| NO        | DIN           | OUT                  | SPI INT        |
-| PC5       | DIN           | IN                   | button         |
-| PC3       | DOUT          | OUT                  | clock out      |
+| PA5       |  USART0 TX       |
+| PA6       |  USART0 EX       |
+| PB0       |  LED             |
+| PC5       |  button          |
+| PC3       |  clock out       |
 
 
 Import the included **.sls** file to **Simplicity STUDIO** then build and flash the project to the bgm board.

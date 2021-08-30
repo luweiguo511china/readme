@@ -91,7 +91,7 @@ bootloader + application + nvm3 + lock bytes
 current application size is: ~kB
 
 ### Software Workflow ###
-![workflow](images/workflow.png)
+![workflow](images/bgm-iadc-workflow.png)
 
 ## API Overview ##
 **General**:

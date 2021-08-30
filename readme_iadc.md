@@ -32,7 +32,7 @@ ENOB is calculated based on below **formula**:
 - Which includes: 
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
   - TI 24-bit Low Power Delta-sigma ADC [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
-  - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/product/REF3312)
+  - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/lit/pdf/sbos392)
   - Silabs [EFR32BG22](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
 
 ## Setup ##

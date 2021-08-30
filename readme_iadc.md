@@ -7,7 +7,9 @@ The EFR32 Wireless Gecko **Series 2** IADC is an intermediate architecture combi
 The flexible incremental architecture uses **oversampling** to allow applications to trade speed for **higher resolution**.  
 
 This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It also cover offset and gain **calibration** of the IADC with **external reference**.  
+ENOB is calculated based on below formula:  
 ![diagram](images/bgm-iadc-enob.png)  
+
 **Key points** to attain 14.3 bit ENOB:
 - Differential mode input
 - External reference

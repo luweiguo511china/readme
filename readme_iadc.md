@@ -6,11 +6,11 @@ The EFR32 Wireless Gecko **Series 2** IADC is an intermediate architecture combi
 
 The flexible incremental architecture uses **oversampling** to allow applications to trade speed for **higher resolution**.  
 
-This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It also cover offset and gain **calibration** of the IADC with **external reference**.  
+This example discusses how to attain 14.3-bit **ENOB** with **oversampling**. It also covers offset and gain **calibration** of the IADC with **external reference**.  
 ENOB is calculated based on below **formula**:  
 ![diagram](images/bgm-iadc-enob.png)  
 
-**Key points** to attain 14.3 bit ENOB:
+**Key points** to attain 14.3 bits ENOB:
 - **Differential** mode input
 - External **reference**
 - 32+ **oversample** rate
@@ -33,18 +33,18 @@ ENOB is calculated based on below **formula**:
   - TI 14-bit Voltage-Output DAC [DAC70501](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
   - TI 24-bit Low Power Delta-sigma ADC [ADC1220](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
   - TI Low Drift Voltage Reference [REF3312](https://www.ti.com/lit/pdf/sbos392)
-  - Silabs [EFR32BG22](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
+  - Silicon Labs [EFR32BG22](https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf)
 
 ## Setup ##
 
-**Connect** bgm board with WSTK **mainboard** via **Simplicity 10 pins Adapter**, and connect WSTK main board to **PC** via **mini USB**.
+**Connect** bgm board with WSTK **mainboard** via **Simplicity 10 pins Adapter** and connect WSTK main board to **PC** via **mini USB**.
 - Set the **Debug Mode** as **Externa Device (OUT)**.
 - Set **Target part** in Simplicity Studio **Launcher->Debug Adapter->Device Configuration->Device hardware** as EFR32BG22C224F352GM32.
 - Read the **Secure FW** version.
 - Flash the **bootloader** first via **Simplicity Commander** or **Flash Programmer**.
 - The pre-build bootloader is in folder like instal_path\v3.2\platform\bootloader\sample-apps\bootloader-storage-internal-single-512k\efr32mg22c224f512im40-brd4182a
 
-The final **connections** should looks like so:
+The final **connections** should look like so:
 ![brd4001a+bgm](images/bgm-iadc-connection.png)
 
 ## Hardware ##
@@ -145,7 +145,7 @@ current application size is: ~kB
 | double adcEnobResult;                           | adc enob result              |
 
 ## Power Consumption ##
-| Components(Peripheral) | Power Up       | Power Down       | Comment         |
+| Components (Peripheral)| Power Up       | Power Down       | Comment         |
 |------------------------|----------------|------------------|-----------------|
 | REF3312                | 4.9uA          | -                |                 |
 | DAC70501               | 1.05mA         | 15uA             | ADC reference   |
@@ -167,7 +167,7 @@ bluetooth_bgm_iadc.sls
 - **drag** the source and header files into the folder.
 - Add the inc path **C/C++ Build->Settings->Tool Settings->GNU ARC C Compile->Includes->Include paths**.
 - **Replace** the **app.c**
-- **ignore** PTI warning in pintool.
+- **ignore** PTI warning in **Pintool**.
 
 ## How to Port to Another Part ##
 
@@ -187,8 +187,8 @@ Then:
 - **Run** the code in EFR32BG22
 - **Open** EFR connect app, **filter** bluetooth_bgm_iadc, **connect** it
 - EFR32BG22 **EMU Die Temperature**, UUID **b97a8a77-f1fd-4a13-a492-05360de078cd**, read EFR32BG22 chipset die temperature
-- Calibration **Offset** result of ADC(mV), UUID **7489487f-3519-455e-8e1b-1e9dc56c3ba9**
-- Calibration **Gain** result of ADC(mV), UUID **4a9e0629-48a0-4a89-9314-6f6c70879c6d**
+- Calibration **Offset** result of ADC (mV), UUID **7489487f-3519-455e-8e1b-1e9dc56c3ba9**
+- Calibration **Gain** result of ADC, UUID **4a9e0629-48a0-4a89-9314-6f6c70879c6d**
 - ADC calculated **ENOB**, UUID **4a9e0629-48a0-4a89-9314-6f6c70879c6d**  
 ![temperature](images/bgm-iadc-temperature.png)  
 ![offset](images/bgm-iadc-offset.png)  

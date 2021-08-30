@@ -69,12 +69,6 @@ Schematic is [here](doc/CGM-Board_Schematic.pdf)
 | PC3       |  clock out       |
 
 
-Import the included **.sls** file to **Simplicity STUDIO** then build and flash the project to the bgm board.
-In Simplicity Studio select **File->Import** and navigate to the directory with the **.sls** project file.
-The project is built with relative paths to the STUDIO_SDK_LOC variable which was defined as
-
-C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
-
 ## How the Project Works ##
 
 The application sits in EM2 until an interrupt occurs. The push buttons on the GG11 Starter Kit is used to start the TIMER and choose a rotation direction. TIMER1 is set to overflow at a frequency of 200 Hz and set to interrupt in an overflow event. In the TIMER1 interrupt handler, the software sets the coils to the next state in order to step the motor. In order to rotate the motor counter-clockwise, the motor coils need to be driven in the following order: Coil 1 -> Coil 3 -> Coil 2 -> Coil 4. In order to rotate the motor clockwise, the motor coils need to be driven in the following order: Coil 4 -> Coil 2 -> Coil 3 -> Coil 1. The calculateSteps() function determines the number of full steps required to rotate by a specified angle. The desired delta angle can be set using the ANGLE_PER_TRIGGER macro. TIMER1 will continue to interrupt until the motor shaft rotates by the desired angle. Once the desired angle is reached, TIMER1 stops and the application waits for the next pushbutton press.
@@ -181,6 +175,11 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 - ONLY EFR32/EFM32 S2 support this 16-bit ENOB.
 
 ## How to Test ##
+Import the included **.sls** file to **Simplicity Studio** then build and flash the project to the bgm board.
+In Simplicity Studio select **File->Import** and navigate to the directory with the **.sls** project file.
+The project is built with relative paths to the STUDIO_SDK_LOC variable which was defined as  
+C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
+
 - **Run** the code in EFR32BG22
 - **Open** EFR connect app, **filter** bluetooth_bgm_iadc, **connect** it
 - EFR32BG22 **EMU Die Temperature**, UUID **b97a8a77-f1fd-4a13-a492-05360de078cd**, read EFR32BG22 chipset die temperature

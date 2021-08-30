@@ -202,7 +202,6 @@ Then:
 - PC05 use as button (port C/D), not support by **simple button** component.
 
 ## Reference ##
-
 - DAC70501 [data sheet](https://www.ti.com/lit/ds/symlink/dac70501.pdf)
 - ADC1220 [data sheet](https://www.ti.com/lit/ds/symlink/ads1220.pdf)
 - REF3312 [data sheet](https://www.ti.com/lit/pdf/sbos392)

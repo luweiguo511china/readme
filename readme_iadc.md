@@ -186,7 +186,7 @@ C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
 Then:
 - **Run** the code in EFR32BG22
 - **Open** EFR connect app, **filter** bluetooth_bgm_iadc, **connect** it
-- EFR32BG22 **EMU Die Temperature**, UUID **b97a8a77-f1fd-4a13-a492-05360de078cd**, read EFR32BG22 chipset die temperature
+- EFR32BG22 **EMU Die Temperature**, UUID **b97a8a77-f1fd-4a13-a492-05360de078cd**
 - Calibration **Offset** result of ADC (mV), UUID **7489487f-3519-455e-8e1b-1e9dc56c3ba9**
 - Calibration **Gain** result of ADC, UUID **4a9e0629-48a0-4a89-9314-6f6c70879c6d**
 - calculated **ENOB** result of ADC, UUID **872eb7bd-55db-4dcb-957c-306776583577**  

@@ -26,7 +26,7 @@ ENOB is calculated based on below **formula**:
 ## Hardware Required ##
 
 - One WSTK [**mainboard**](https://www.silabs.com/development-tools/wireless/wireless-starter-kit-mainboard)
-- One [**bgm board**](doc/CGM-Board_Schematic.pdf)
+- One [**Silicon Labs demo board **](doc/CGM-Board_Schematic.pdf)
 ![diagram](images/bgm-iadc-diagram.png)
 
 - Which includes: 
@@ -37,7 +37,7 @@ ENOB is calculated based on below **formula**:
 
 ## Setup ##
 
-**Connect** bgm board with WSTK **mainboard** via **Simplicity 10 pins Adapter** and connect WSTK main board to **PC** via **mini USB**.
+**Connect** Silicon Labs demo board with WSTK **mainboard** via **Simplicity 10 pins Adapter** and connect WSTK main board to **PC** via **mini USB**.
 - Set the **Debug Mode** as **Externa Device (OUT)**.
 - Set **Target part** in Simplicity Studio **Launcher->Debug Adapter->Device Configuration->Device hardware** as EFR32BG22C224F352GM32.
 - Read the **Secure FW** version.
@@ -178,7 +178,7 @@ Open the **Project Properties** and navigate to the **C/C++ Build -> Board/Part/
 
 ## How to Test ##
 
-Import the included **.sls** file to **Simplicity Studio** then **build** and **flash** the project to the bgm board.
+Import the included **.sls** file to **Simplicity Studio** then **build** and **flash** the project to the Silicon Labs demo board.
 In Simplicity Studio select **File->Import** and **navigate** to the directory with the **.sls** project file.
 The project is built with **relative paths** to the STUDIO_SDK_LOC variable which was defined as  
 C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v3.2
